@@ -9,14 +9,14 @@ import time
 print('Input a sequence to be transmitted')
 print('Please enter milliseconds between each command')
 timeBetween = raw_input()
-print(timeBetween + 'millisecond delay')
+print(timeBetween + ' millisecond delay')
 timeBetween = float(timeBetween)
 
 print('Command numbers are labelled according to the image')
 
-repeat == 'n'
+repeat = 'n'
 while(repeat == 'n'):
-    print('Please enter the command numbers separated by a space)
+    print('Please enter the command numbers separated by a space')
     command = raw_input()
     print(command + 'entered')
     command = command.split(' ')
@@ -26,12 +26,11 @@ while(repeat == 'n'):
     repeat = 'y';
 
     while(repeat == 'y'):
-        for i in range(arraySize)
+        for i in range(arraySize):
             time.sleep(timeBetween)
             toEnter = ('irsend SEND_ONCE' + getRemoteName(command[i]) + keys[command[i]])   
             os.system(toEnter)
 
         print('repeat sequence? y/n')
         repeat = raw_input()
-
 
